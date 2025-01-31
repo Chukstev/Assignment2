@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        list-style-type: none;
+      }
+      body {
+        padding-top: 80px;
+        background-color: #FEFCF6;
+      }
+      header {
+        background-color: white;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        padding: 20px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        z-index: 1;
+      }
+      nav ul li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+      nav ul li a {
+        color: black;
+        text-decoration: none;
+      }
+      main {
+        text-align: justify;
+        max-width: 1024px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        line-height: 30px;
+      }
+      [controls] {
+        z-index: 0;
+      }
+      h1, h2 {
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CHUKWUEMEKA STEPHEN ANOWAI</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Courses</a></li>
+          <li><a href="media.html">HTML Media Elements</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Embedding Media In Webpages In HTML</h1>
+    <p>There are Four (4) media elements that exists in HTML, they include:
+      <ul>
+        <li>Audio</li>
+        <li>Video</li>
+        <li>Img</li>
+        <li>Picture</li>
+      </ul>
+      <!--The audio element-->
+      <h2>The Audio Element</h2>
+      <p>The audio element/tag allows the audio files to be embedded into webpage. The control attribute helps the users to be able to play/pause, seek, adjust volume in the media. Below is an example of an audio element in HTML.</p>
+      <audio controls>
+          <source src="Assets/Audio/02 - X's & O's.mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+      </audio>
+      <p><a href="Assets/Audio/02 - X's & O's.mp3" download="Jeremih - X's & O's.mp3">DOWNLOAD MP3</a></p>
+      <!--the video element-->
+      <h2>The Video Element</h2>
+      <p>The video element is another media element used in HTML to embed video in a website.</p>
+      <video controls width="450" height="350">
+        <source src="Assets/Video/12572039_3840_2160_25fps.mp4" type="video/mp4">
+        Your browser does not support the video Element
+      </video>
+      <p><a href="assets/Video/12572039_3840_2160_25fps.mp4" download="Woman in alley">DOWNLOAD MP4</a></p>
+    </p>
+    <!--the image element-->
+    <h2>The Image Element</h2>
+    <p>The image element cannot be left out among the media elements in HTML. so here is an example of the image element.</p>
+    <img src="./assets/Images/my-photo-large.jpeg" width="480" height="400">
+    <!--the picture element-->
+    <h2>The Picture element</h2>
+    <p>The picture element in HTML is a more advanced and flexible way to handle responsive images. It allows developers to specify multiple image sources for different conditions, such as screen sizes, resolutions, or formats.</p>
+    <picture>
+      <source
+        media="(min-width: 1025px)"
+        srcset="./assets/Images/31x9OKn-the-hunger-games-wallpaper.jpg"
+      />
+      <source
+        media="(min-width: 640px)"
+        srcset="./assets/Images/15e680e0cb86b22b0e560d1ddd5d6df0.jpg"
+      />
+      <source
+        media="(min-width: 320px)"
+        srcset="./assets/Images/josh-carter-PO7hiRY1DlA.jpg"
+      />
+      <img
+        style="width: 100%;"
+        src="./Assets/Images/my-photo-large.jpeg"
+        alt="woman in glasses"
+      />
+    </picture>
+    </main>
+  </body>
+</html>
